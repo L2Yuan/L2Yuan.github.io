@@ -27,6 +27,19 @@
             overflow-x: hidden;
         }
 
+        .watercolor-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=watercolor%20cherry%20blossom%20background%2C%20soft%20pink%20and%20white%20petals%2C%20abstract%2C%20subtle%2C%20elegant%2C%20minimalist&image_size=landscape_16_9');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+        }
+
         #sakura-canvas {
             position: fixed;
             top: 0;
@@ -35,59 +48,6 @@
             height: 100%;
             pointer-events: none;
             z-index: 1;
-        }
-
-        .watercolor-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
-        }
-
-        .watercolor-blob {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.4;
-            animation: float 20s ease-in-out infinite;
-        }
-
-        .blob-1 {
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, #FFB7C5 0%, transparent 70%);
-            top: -200px;
-            right: -100px;
-            animation-delay: 0s;
-        }
-
-        .blob-2 {
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, #FFD1DC 0%, transparent 70%);
-            bottom: -150px;
-            left: -100px;
-            animation-delay: -5s;
-        }
-
-        .blob-3 {
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, #E8B4B8 0%, transparent 70%);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation-delay: -10s;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            25% { transform: translate(30px, -30px) scale(1.05); }
-            50% { transform: translate(-20px, 20px) scale(0.95); }
-            75% { transform: translate(20px, 30px) scale(1.02); }
         }
 
         nav {
@@ -457,17 +417,16 @@
         .contact-links {
             display: flex;
             justify-content: center;
-            gap: 2.5rem;
+            gap: 3rem;
         }
 
         .contact-link {
             display: flex;
-            flex-direction: column;
             align-items: center;
             text-decoration: none;
             color: #6A6A6A;
             transition: all 0.4s ease;
-            padding: 1.5rem 2.5rem;
+            padding: 1.5rem 3rem;
             background: white;
             border-radius: 20px;
             box-shadow: 0 5px 20px rgba(255, 183, 197, 0.15);
@@ -481,13 +440,13 @@
         }
 
         .contact-link i {
-            font-size: 2.5rem;
-            margin-bottom: 0.8rem;
+            font-size: 2rem;
+            margin-right: 1rem;
             color: #D4A0A8;
         }
 
         .contact-link span {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: 400;
         }
 
@@ -550,6 +509,7 @@
             .contact-links {
                 flex-direction: column;
                 align-items: center;
+                gap: 1.5rem;
             }
 
             .awards-section {
@@ -581,13 +541,8 @@
     </style>
 </head>
 <body>
+    <div class="watercolor-bg"></div>
     <canvas id="sakura-canvas"></canvas>
-    
-    <div class="watercolor-bg">
-        <div class="watercolor-blob blob-1"></div>
-        <div class="watercolor-blob blob-2"></div>
-        <div class="watercolor-blob blob-3"></div>
-    </div>
 
     <nav>
         <div class="nav-container">
@@ -604,7 +559,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Zhiyuan Liu</h1>
-            <p class="hero-subtitle">Sophomore in Computer Science @ Sichuan University</p>
+            <p class="hero-subtitle">Class of 2024 · Sichuan University</p>
             <p class="hero-tagline">"As flowers bloom along the way, so shall your journey unfold."</p>
             <a href="#about" class="btn">Discover More</a>
         </div>
@@ -618,13 +573,13 @@
             </div>
             <div class="about-text">
                 <h3>Hello, welcome to my page!</h3>
-                <p>I am a sophomore majoring in Computer Science and Technology at Sichuan University. With top academic performance and a strong mathematical foundation, I am passionate about exploring the frontiers of AI research and advancing my technical skills.</p>
-                <p>Beyond academics, I find joy in the beauty of art, the depth of literature, the creativity of painting, and the art of photography. I believe in the harmony between technology and aesthetics.</p>
+                <p>I am a Computer Science and Technology student at Sichuan University, class of 2024. With top academic performance and a solid mathematical foundation, I am deeply passionate about exploring the frontiers of AI research and advancing my technical skills in coding and artificial intelligence.</p>
+                <p>Beyond academics, I find joy in the beauty of art, the depth of literature, and the creativity of painting. I believe in the harmony between technology and aesthetics, and I strive to integrate both into my work and daily life.</p>
                 <div class="about-tags">
                     <span class="tag">AI Research</span>
                     <span class="tag">Mathematics</span>
                     <span class="tag">Art & Design</span>
-                    <span class="tag">Photography</span>
+                    <span class="tag">Literature</span>
                 </div>
             </div>
         </div>
@@ -680,11 +635,11 @@
         <div class="contact-links">
             <a href="mailto:2024141460041@stu.scu.edu.cn" class="contact-link">
                 <i class="fas fa-envelope"></i>
-                <span>Email</span>
+                <span>2024141460041@stu.scu.edu.cn</span>
             </a>
             <a href="https://github.com/L2Yuan" target="_blank" class="contact-link">
                 <i class="fab fa-github"></i>
-                <span>GitHub</span>
+                <span>github.com/L2Yuan</span>
             </a>
         </div>
     </section>
@@ -701,7 +656,7 @@
             let height = canvas.height = window.innerHeight;
             
             const petals = [];
-            const petalCount = 50;
+            const petalCount = 40;
             
             const petalColors = [
                 'rgba(255, 183, 197, 0.8)',
@@ -719,21 +674,21 @@
                 reset() {
                     this.x = Math.random() * width;
                     this.y = Math.random() * -height;
-                    this.size = Math.random() * 12 + 6;
-                    this.speedY = Math.random() * 1.5 + 0.5;
-                    this.speedX = Math.random() * 1 - 0.5;
+                    this.size = Math.random() * 10 + 8;
+                    this.speedY = Math.random() * 1.2 + 0.6;
+                    this.speedX = Math.random() * 0.8 - 0.4;
                     this.rotation = Math.random() * Math.PI * 2;
-                    this.rotationSpeed = (Math.random() - 0.5) * 0.03;
-                    this.oscillationSpeed = Math.random() * 0.02 + 0.01;
-                    this.oscillationDistance = Math.random() * 40 + 20;
+                    this.rotationSpeed = (Math.random() - 0.5) * 0.02;
+                    this.oscillationSpeed = Math.random() * 0.015 + 0.008;
+                    this.oscillationDistance = Math.random() * 30 + 15;
                     this.time = Math.random() * Math.PI * 2;
                     this.color = petalColors[Math.floor(Math.random() * petalColors.length)];
-                    this.opacity = Math.random() * 0.4 + 0.4;
+                    this.opacity = Math.random() * 0.5 + 0.3;
                 }
                 
                 update() {
                     this.time += this.oscillationSpeed;
-                    this.x += Math.sin(this.time) * 0.5 + this.speedX;
+                    this.x += Math.sin(this.time) * 0.8 + this.speedX;
                     this.y += this.speedY;
                     this.rotation += this.rotationSpeed;
                     
@@ -752,13 +707,13 @@
                     ctx.beginPath();
                     ctx.moveTo(0, 0);
                     ctx.bezierCurveTo(
-                        this.size / 2, -this.size / 3,
-                        this.size, -this.size / 4,
-                        this.size, 0
+                        this.size * 0.8, -this.size * 0.4,
+                        this.size * 1.2, -this.size * 0.2,
+                        this.size * 1.5, 0
                     );
                     ctx.bezierCurveTo(
-                        this.size, this.size / 4,
-                        this.size / 2, this.size / 3,
+                        this.size * 1.2, this.size * 0.2,
+                        this.size * 0.8, this.size * 0.4,
                         0, 0
                     );
                     
@@ -768,13 +723,13 @@
                     ctx.beginPath();
                     ctx.moveTo(0, 0);
                     ctx.bezierCurveTo(
-                        -this.size / 2, -this.size / 3,
-                        -this.size, -this.size / 4,
-                        -this.size, 0
+                        -this.size * 0.8, -this.size * 0.4,
+                        -this.size * 1.2, -this.size * 0.2,
+                        -this.size * 1.5, 0
                     );
                     ctx.bezierCurveTo(
-                        -this.size, this.size / 4,
-                        -this.size / 2, this.size / 3,
+                        -this.size * 1.2, this.size * 0.2,
+                        -this.size * 0.8, this.size * 0.4,
                         0, 0
                     );
                     ctx.fill();
