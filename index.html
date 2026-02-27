@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zhiyuan Liu | Personal Homepage</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -22,7 +22,7 @@
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Lora', serif;
             color: var(--text-dark);
             line-height: 1.6;
             overflow-x: hidden;
@@ -77,9 +77,9 @@
         }
 
         h1 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cinzel', serif;
             font-size: 3.5rem;
-            font-weight: 700;
+            font-weight: 600;
             color: var(--text-dark);
             margin-bottom: 15px;
             letter-spacing: 2px;
@@ -88,7 +88,7 @@
         .slogan {
             font-family: 'Dancing Script', cursive;
             font-style: italic;
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             color: #884961;
             margin-top: 10px;
         }
@@ -106,17 +106,22 @@
             transition: transform 0.3s ease;
         }
 
+        section p {
+            font-size: 1.1rem;
+        }
+
         section:hover {
             transform: translateY(-5px);
         }
 
         h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
+            font-family: 'Cinzel', serif;
+            font-size: 1.7rem;
             margin-bottom: 25px;
             color: var(--accent-pink);
             display: flex;
             align-items: center;
+            letter-spacing: 1px;
         }
 
         h2 i {
@@ -131,23 +136,21 @@
 
         .item-title {
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             display: block;
         }
 
         .item-detail {
-            font-size: 0.95rem;
-            color: #555;
+            font-size: 1rem;
+            color: #666;
             display: block;
             margin-top: 4px;
         }
 
         .status-placeholder {
             font-style: italic;
-            color: #777;
-            padding: 10px;
-            border-left: 3px solid var(--accent-pink);
-            background: rgba(255, 128, 171, 0.05);
+            font-size: 1.1rem;
+            color: #666;
         }
 
         /* 联系方式 */
@@ -175,7 +178,7 @@
         footer {
             text-align: center;
             padding: 40px 0;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             color: #888;
         }
 
@@ -237,7 +240,7 @@
         <section id="publications">
             <h2><i class="fa-solid fa-book-open"></i> Publications</h2>
             <p class="status-placeholder">
-                Status: Currently focusing on foundational research and exploring AI frontiers.
+                Forthcoming. I'm currently working on hyperbolic optimization and LLM reasoning.
             </p>
         </section>
 
@@ -250,7 +253,7 @@
         </section>
 
         <footer>
-            <p>&copy; 2026 Zhiyuan Liu. Designed with blooming flowers.</p>
+            <p>© 2026 Zhiyuan Liu · Handcrafted with ♡ at SCU</p>
         </footer>
     </div>
 
@@ -270,7 +273,7 @@
                 this.speedX = (Math.random() - 0.5) * 1;
                 this.speedY = Math.random() * 1 + 0.5;
                 this.opacity = Math.random() * 0.5 + 0.3;
-                this.color = `rgba(255, ${Math.floor(150 + Math.random() * 50)}, ${Math.floor(180 + Math.random() * 30)}, ${this.opacity})`;
+                this.color = `rgba(255, ${Math.floor(130 + Math.random() * 40)}, ${Math.floor(150 + Math.random() * 30)}, ${this.opacity})`;
             }
 
             draw() {
