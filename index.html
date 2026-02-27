@@ -103,7 +103,7 @@
             padding: 40px;
             margin-bottom: 30px;
             box-shadow: 0 8px 32px 0 rgba(255, 182, 193, 0.2);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
         }
 
         section p {
@@ -111,7 +111,9 @@
         }
 
         section:hover {
-            transform: translateY(-5px);
+            transform: translateY(-5px) translateX(-5px);
+            border-color: rgba(255, 130, 150, 0.6);
+            box-shadow: 8px 12px 40px rgba(200, 100, 120, 0.4), 0 0 20px rgba(255, 150, 170, 0.2);
         }
 
         h2 {
@@ -203,6 +205,10 @@
         .animate-section {
             opacity: 0;
             animation: fadeInUp 1s ease forwards;
+        }
+
+        .animate-section.animated {
+            opacity: 1;
         }
 
         .animate-section:nth-of-type(1) { animation-delay: 0.5s; }
@@ -344,6 +350,13 @@
         window.addEventListener('resize', init);
         init();
         animate();
+
+        document.querySelectorAll('.animate-section').forEach(function(el) {
+            el.addEventListener('animationend', function() {
+                el.classList.remove('animate-section');
+                el.classList.add('animated');
+            });
+        });
     </script>
 </body>
 </html>
